@@ -1,15 +1,6 @@
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Button, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
+import ModalComponent from './modal';
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,25 +29,7 @@ const Header = () => {
           Show A glipse of your stored data
         </Button>
       </div>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            aspernatur consequuntur error culpa rem aliquid earum soluta
-            officiis omnis officia.
-          </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost'>Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <ModalComponent open={isOpen} handleClose={onClose} />
     </>
   );
 };
