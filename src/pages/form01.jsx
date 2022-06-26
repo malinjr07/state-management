@@ -7,7 +7,6 @@ import {
   FormLabel,
   Input,
   InputGroup,
-  InputLeftAddon,
   InputRightElement,
   SimpleGrid,
   Button,
@@ -38,7 +37,7 @@ const Form01 = () => {
   return (
     <form method='post' onSubmit={handleSubmit}>
       <Container maxW='1366px'>
-        <SimpleGrid columns={2} spacing={10}>
+        <SimpleGrid columns={1} spacing={10}>
           <Box>
             <FormControl>
               <FormLabel htmlFor='email'>Email address</FormLabel>
@@ -48,19 +47,6 @@ const Form01 = () => {
                 id='email'
                 type='email'
               />
-              <FormHelperText>
-                There is no Database connected. clear your browser cache to
-                clear data.
-              </FormHelperText>
-            </FormControl>
-          </Box>
-          <Box>
-            <FormControl>
-              <FormLabel htmlFor='email'>Phone Number</FormLabel>
-              <InputGroup>
-                <InputLeftAddon children='+880' />
-                <Input type='tel' placeholder='phone number' />
-              </InputGroup>
               <FormHelperText>
                 There is no Database connected. clear your browser cache to
                 clear data.
