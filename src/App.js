@@ -16,16 +16,17 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Welcome />} />
-        <Route path='form-01' element={<Form01 />} />
-        <Route path='form-02' element={<Form02 />} />
-        <Route path='form-03' element={<Form03 />} />
-        <Route path='form-04' element={<Form04 />} />
-        <Route path='form-05' element={<Form05 />} />
-        <Route path='form-06' element={<Form06 />} />
-        <Route path='form-07' element={<Form07 />} />
-        <Route path='form-08' element={<Form08 />} />
-        <Route path='form-09' element={<Form09 />} />
+        <Route path='/' exact element={<Welcome />}>
+          <Route index element={<Form01 />} />
+          <Route path='form-02' element={<Form02 />} />
+          <Route path='form-03' element={<Form03 />} />
+          <Route path='form-04' element={<Form04 />} />
+          <Route path='form-05' element={<Form05 />} />
+          <Route path='form-06' element={<Form06 />} />
+          <Route path='form-07' element={<Form07 />} />
+          <Route path='form-08' element={<Form08 />} />
+          <Route path='form-09' element={<Form09 />} />
+        </Route>
       </Routes>
     </>
   );
