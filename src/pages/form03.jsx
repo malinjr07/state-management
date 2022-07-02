@@ -16,7 +16,7 @@ import {
   ArrowDownIcon,
   ArrowBackIcon,
 } from '@chakra-ui/icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import data from '../data/movies';
 
 const Form03 = () => {
@@ -33,7 +33,7 @@ const Form03 = () => {
     e.preventDefault();
     setLoadingStatus(true);
     setTimeout(() => {
-      navigate('/form-03');
+      navigate('/complete');
       setLoadingStatus(false);
     }, 1500);
   };
@@ -77,14 +77,14 @@ const Form03 = () => {
         >
           <Button
             isLoading={loadingStatus}
-            type='submit'
             style={{ width: '15%', margin: '20px auto' }}
             leftIcon={<ArrowBackIcon />}
             colorScheme='teal'
             variant='outline'
           >
-            Previous
+            <Link to='/form-02'> Previous </Link>
           </Button>
+
           <Button
             isLoading={loadingStatus}
             type='submit'
@@ -93,7 +93,7 @@ const Form03 = () => {
             colorScheme='teal'
             variant='outline'
           >
-            Next
+            Submit
           </Button>
         </SimpleGrid>
       </Container>
