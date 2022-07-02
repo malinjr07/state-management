@@ -1,11 +1,7 @@
 # State Management
 
-This Repo is created to demonstrate several tasks in specific functionalities.
+In This Branch, I've Demonstrated Usage of React-Redux. Yes, I know there's another awesome package called redux-toolkit and I'll use it eventually. But for now, let's use React-Redux only.
 
-There will be:
+I've completed such trivial task that would be easily handled by react-router. But, as it's a ground for Redux, I'm letting redux to handle most of the tasks.
 
-Multi-Step Form: Using Redux | Context API
-
-Custom Drag'n Drop Functionality: Using Redux | Context API | State Lifting
-
-please click on the names to checkout the branches. You can see those from branch section as well.
+For Fast designing, I've used Chakra-UI.
