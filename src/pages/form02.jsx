@@ -12,7 +12,11 @@ import {
   Button,
   Select,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon, ArrowDownIcon } from '@chakra-ui/icons';
+import {
+  ArrowForwardIcon,
+  ArrowDownIcon,
+  ArrowBackIcon,
+} from '@chakra-ui/icons';
 import { useNavigate } from 'react-router-dom';
 
 const Form02 = () => {
@@ -83,7 +87,7 @@ const Form02 = () => {
           <Box>
             <FormControl>
               <FormLabel htmlFor='location'>Location</FormLabel>
-              <Select icon={<ArrowDownIcon />} placeholder='Woohoo! A new icon'>
+              <Select icon={<ArrowDownIcon />}>
                 <option value='option1'>Option 1</option>
                 <option value='option2'>Option 2</option>
                 <option value='option3'>Option 3</option>
@@ -97,8 +101,22 @@ const Form02 = () => {
         </SimpleGrid>
         <SimpleGrid
           columns={1}
-          style={{ display: 'flex', justifyContent: 'flex-start' }}
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            marginTop: '35px',
+          }}
         >
+          <Button
+            isLoading={loadingStatus}
+            type='submit'
+            style={{ width: '15%', margin: '20px auto' }}
+            leftIcon={<ArrowBackIcon />}
+            colorScheme='teal'
+            variant='outline'
+          >
+            Previous
+          </Button>
           <Button
             isLoading={loadingStatus}
             type='submit'
