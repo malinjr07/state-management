@@ -17,7 +17,7 @@ import {
   ArrowDownIcon,
   ArrowBackIcon,
 } from '@chakra-ui/icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Form02 = () => {
   const [loadingStatus, setLoadingStatus] = useState(false);
@@ -109,13 +109,12 @@ const Form02 = () => {
         >
           <Button
             isLoading={loadingStatus}
-            type='submit'
             style={{ width: '15%', margin: '20px auto' }}
             leftIcon={<ArrowBackIcon />}
             colorScheme='teal'
             variant='outline'
           >
-            Previous
+            <Link to='/'> Previous</Link>
           </Button>
           <Button
             isLoading={loadingStatus}
